@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javastript PE opdracht</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <main class="container">
+        <h1>Registreer</h1>
+        <p>Meld je aan bij Anoroc Services, wij beschermen jou software tegen malware!</p>
+        <div class="row">
+            <div class="col-md-8">
+                <form>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="voornaam" class="form-label">Voornaam</label>
+                            <input type="text" class="form-control" id="voornaam" placeholder="Uw voornaam">
+                        </div>
+                        <div class="col mb-3">
+                            <label for="achternaam" class="form-label">Achternaam</label>
+                            <input type="text" class="form-control" id="achternaam" placeholder="Uw naam">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <!-- <label for="gebruikersnaam" class="form-label">Gebruikersnaam</label>
+                            <input type="text" class="form-control" id="gebruikersnaam"> -->
+                            <label for="gebruikersnaam" class="form-label">Gebruikersnaam</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="text" class="form-control" id="gebruikersnaam" aria-describedby="inputGroupPrepend" required placeholder="r0730132">
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <label for="Email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="mail@example.be">
+                            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="wachtwoord" class="form-label">Wachtwoord</label>
+                            <input type="password" class="form-control" id="wachtwoord">
+                            <div class="form-text" id="basic-addon4">Je wachtwoord moet minstens 8 tekens lang zijn.</div>
+                        </div>
+                        <div class="col mb-3">
+                            <label for="wachtwoordRepeat" class="form-label">Herhaal wachtwoord</label>
+                            <input type="password" class="form-control" id="wachtwoordRepeat">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Adres" class="form-label">Adres</label>
+                        <input type="text" class="form-control" id="Adres" placeholder="Uw adres en huisnummer">
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="Land" class="form-label">Land</label>
+                            <!-- <input type="text" class="form-control" id="Land"> -->
+                            <select class="form-select" id="Land" required>
+                                <option selected disabled value="">Kies een land</option>
+                                <option>België</option>
+                                <option>Nederland</option>
+                                <option>Spanje</option>
+                                <option>Frankrijk</option>
+                            </select>
+                        </div>
+                        <div class="col mb-3">
+                            <label for="Provincie" class="form-label">Provincie</label>
+                            <!-- <input type="text" class="form-control" id="Provincie"> -->
+                            <select class="form-select" id="Provincie" required>
+                                <option selected disabled value="">Kies een provincie</option>
+                                <option>Antwerpen</option>
+                                <option>Oost-Vlaanderen</option>
+                                <option>West-Vlaanderen</option>
+                            </select>
+                        </div>
+                        <div class="col mb-3">
+                            <label for="Postcode" class="form-label">Postcode</label>
+                            <input type="text" class="form-control" id="Postcode">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="OphoogteBlijven" class="form-label"><h2>Hou me op de hoogte</h2></label>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="OphoogteBlijven" required>
+                                    <label class="form-check-label" for="OphoogteBlijven">
+                                    Inschrijven voor onze nieuwsbrief
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="AkkoordVoorwaarden">
+                                <label class="form-check-label" for="AkkoordVoorwaarden">Ik ga akkoord met de algemene voorwaarde.</label>
+                            </div>
+                        </div>
+                        <!--https://getbootstrap.com/docs/5.3/forms/checks-radios/-->
+                        <div class="col mb-3" id="Betaling">
+                            <label for="OphoogteBlijven" class="form-label"><h2>Betaling</h2></label>
+                        
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="KeuzeBetalingswijze" id="BankingApp" value="Banking app">
+                                <label class="form-check-label" for="BankingApp">
+                                    Banking app
+                                </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="KeuzeBetalingswijze" id="Overschrijving" value="Overschrijving">
+                            <label class="form-check-label" for="Overschrijving">
+                                Overschrijving
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="KeuzeBetalingswijze" id="VisaCard" value="VisaCard">
+                            <label class="form-check-label" for="VisaCard">
+                                Visa card
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="KeuzeBetalingswijze" id="PayPal" value="Pay Pal">
+                            <label class="form-check-label" for="PayPal">
+                                PayPal
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="button" id="btnCheck" class="btn btn-primary mb-2">Indienen</button> <!--type was submit, hier veranderen naar Button => zorgt voor versturen => met javascript heb je dit niet nodig => pagina gaat constant refreshen!! -->
+                </form>
+            </div>
+            <div class="col-md">
+                <div class="alert alert-success" id="Geregistreerd" role="alert">
+                    <h4>Geregistreerd</h4>
+                    <p>Goed gedaan, alles is correct ingevuld!</p>
+                </div>
+                <div class="alert alert-danger" id="errors" role="alert">
+                    <h4>Let op! Errors!</h4>
+                    <ul class="mb-0"></ul>
+                </div>
+                <div class="alert alert-info" id="Betalingswijze" role="alert">
+                    <h4>Betalingswijze</h4>
+                    <p id="tekstBetalingswijze"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const CheckForm = document.querySelector("#btnCheck")
+        //let errors = []
+        let errorsArray = []
+
+        
+        HideAlerts()
+
+        function checkFormulier(){ //best steeds eerst controleren met console log zodat dit werkt 
+            //console.log('Ik werk')
+            //vakjes gaan controleren of ze leeg zijn of niet 
+            errorsArray = [] // error leegmaken
+            checkEmptyField(voornaam, 'Voornaam is verplicht')
+            checkEmptyField(achternaam, 'Achternaam is verplicht')
+            checkEmptyField(gebruikersnaam, 'Gebruikersnaam is verplicht')
+            checkEmptyField(Email, 'Email is verplicht')
+            checkEmptyField(Land, 'Land is verplicht')
+            checkEmptyField(Provincie, 'Provincie is verplicht')
+
+            //validateEmail(Email)
+            if (validateEmail(Email) == false){
+                errorsArray.push('Email is niet geldig!')
+            }
+
+            //valideren wachtwoord
+            //CheckPassword(wachtwoord)
+            if (CheckPassword(wachtwoord)){
+                if(wachtwoord.value != wachtwoordRepeat.value){
+                    errorsArray.push('Wachtwoorden komen niet overeen!')
+                }
+            }else
+            {
+                errorsArray.push('Wachtwoord moet langer zijn dan 7 karakters!')
+            }
+
+
+            //valideren gebruikersnaam 
+            //ControlUserName(gebruikersnaam)
+
+            //valideren betalingswijze
+            let betalingswijze
+            if (BankingApp.checked){
+                betalingswijze = validatePayment(BankingApp)
+            } else if (Overschrijving.checked){
+                betalingswijze= validatePayment(Overschrijving)
+            }else if (VisaCard.checked){
+                betalingswijze= validatePayment(VisaCard)
+            }else if (PayPal.checked){
+                betalingswijze= validatePayment(PayPal)
+            }
+            //console.log(betalingswijze)
+
+            document.querySelector('#tekstBetalingswijze').innerHTML = "Betalingswijze is " + betalingswijze
+
+
+            //poscode checken
+            checkPC(Postcode)
+
+
+            //algemene voorwaarden 
+            if (AkkoordVoorwaarden.checked == false){
+                errorsArray.push('Je moet akkoord gaan met de voorwaarden!')
+            }
+            
+            //errorlijst tonen
+            if (errorsArray.length > 0) {
+                let errorList = document.querySelector('#errors ul')
+                errorList.innerHTML = ""
+                errorsArray.forEach((error) => {
+                    errorList.innerHTML += `<li>${error}</li>`
+                })
+ 
+                document.querySelector('#errors').classList.remove('d-none')
+            } else {
+                document.querySelector('#errors').classList.add('d-none')
+                document.querySelector('#Geregistreerd').classList.remove('d-none')
+                document.querySelector('#Betalingswijze').classList.remove('d-none')
+            }
+
+            
+        }
+        
+        //valideren email: https://www.w3schools.blog/email-validation-javascript-js
+        function validateEmail(email) {
+            var mailformat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if(email.value.match(mailformat))
+            { return true; }
+            else
+            { return false; }
+        }
+
+        function checkEmptyField(field, message){
+            if (field.value == ""){
+                errorsArray.push(message)
+            }
+        }
+
+        // valideren paswoord: https://www.w3schools.com/howto/howto_js_password_validation.asp
+
+        function CheckPassword(Paswoord){
+            if(Paswoord.value.length >= 7) {
+                return true
+              } else {
+                return false
+              }
+        }
+
+        //controle gebruikersnaam
+        //function ControlUserName(Username){
+        //    if (Username[0] == "." || Username[0] == "-"){
+        //        errorsArray.push('Geen geldige gebruikersnaam!')
+        //    }
+        //}
+
+
+        // controle betalingswijze
+        function validatePayment(betaling){
+            return betaling.value
+            
+        }
+        
+
+        //checken postcode
+        function checkPC(postcode){
+            let postcodeNummer = postcode.value
+            if (postcodeNummer >= 1000 && postcodeNummer < 10000){
+                return postcodeNummer
+            }
+            else{
+                errorsArray.push('De waarde van postcode moet tussen 1000 en 9999 liggen.')
+            }
+        }
+
+        function HideAlerts(){
+            document.querySelector('#Geregistreerd').classList.add('d-none')
+            document.querySelector('#errors').classList.add('d-none')
+            document.querySelector('#Betalingswijze').classList.add('d-none')
+        }
+
+        CheckForm.addEventListener('click', checkFormulier)
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
